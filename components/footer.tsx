@@ -25,7 +25,7 @@ export default function Footer() {
       ];
 
   return (
-    <footer className="bg-foreground text-white pt-20 pb-8 px-4 overflow-hidden">
+    <footer className="bg-foreground dark:bg-slate-950 text-white pt-20 pb-8 px-4 overflow-hidden transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -33,10 +33,10 @@ export default function Footer() {
           <div className="animate-slide-up-fade">
             <div className="flex items-center gap-2 mb-4 group cursor-pointer">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
-                <span className="text-xl font-bold text-white">M</span>
+                <span className="text-xl font-bold text-white">S</span>
               </div>
-              <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
-                {language === "en" ? "ENG/Mohamed" : "م/محمد"}
+              <h3 className="text-lg font-bold group-hover:text-primary transition-colors duration-300">
+                {t.brandName}
               </h3>
             </div>
             <p className="text-gray-300 text-sm hover:text-white transition-colors duration-300">
@@ -139,7 +139,7 @@ export default function Footer() {
         </div>
 
         {/* Social Media */}
-        <div className="border-t border-gray-700 pt-8 pb-8 animate-fade-in">
+        <div className="border-t border-gray-700 dark:border-slate-800 pt-8 pb-8 animate-fade-in">
           <div className="flex justify-center gap-6 mb-8">
             {[Mail, Phone, Heart].map((Icon, index) => (
               <a
@@ -156,12 +156,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-400 animate-fade-in">
+        <div className="border-t border-gray-700 dark:border-slate-800 pt-8 text-center text-gray-400 animate-fade-in">
           <p className="hover:text-white transition-colors duration-300">
             {language === "en"
               ? "All rights reserved © "
               : "جميع الحقوق محفوظة © "}
-            {currentYear} <span className="text-primary">{t.footerBrand}</span>
+            {currentYear} <span className="text-primary">{t.brandName}</span>
             {language === "en"
               ? " - Web Development & Design"
               : " - تطوير المواقع والتطبيقات"}

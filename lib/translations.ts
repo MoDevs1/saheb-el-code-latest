@@ -1,5 +1,9 @@
 export const translations = {
   en: {
+    // Branding
+    brandName: 'SahebElCode Company',
+    brandNameShort: 'SahebElCode',
+    
     // Header
     home: 'Home',
     services: 'Services',
@@ -83,9 +87,12 @@ export const translations = {
     footerEmail: 'Email:',
     footerPhone: 'Phone:',
     footerCopyright: 'All rights reserved',
-    footerBrand: 'ENG/Mohamed Tamer',
   },
   ar: {
+    // Branding
+    brandName: 'شركة صاحب الكود',
+    brandNameShort: 'صاحب الكود',
+    
     // Header
     home: 'الرئيسية',
     services: 'الخدمات',
@@ -169,7 +176,6 @@ export const translations = {
     footerEmail: 'البريد الإلكتروني:',
     footerPhone: 'الهاتف:',
     footerCopyright: 'جميع الحقوق محفوظة',
-    footerBrand: 'م/محمد تامر',
   },
 }
 

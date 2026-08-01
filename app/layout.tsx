@@ -2,9 +2,10 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/lib/language-context'
+import { ThemeProvider } from '@/lib/theme-context'
 
 export const metadata: Metadata = {
-  title: 'ENG/Mohamed Tamer | Web Development & Design',
+  title: 'SahebElCode Company | Web Development & Design',
   description: 'Professional web development and design solutions that drive growth and engagement for your business',
   generator: 'sahebElcode',
   icons: {
@@ -42,9 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <body className="antialiased bg-background">
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

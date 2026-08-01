@@ -1,26 +1,25 @@
 'use client'
 
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 import { useLanguage } from '@/lib/language-context'
+import { useTheme } from '@/lib/theme-context'
 import { translations } from '@/lib/translations'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const { language, setLanguage, isArabic } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
   const t = translations[language]
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-border animate-slide-down">
+    <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-border dark:border-slate-700 animate-slide-down transition-colors duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center group cursor-pointer">
-          <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-scale-in group-hover:scale-105 transition-transform">
-            {language === 'en' ? 'ENG/Mohamed' : 'م/محمد'}
+          <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-scale-in group-hover:scale-105 transition-transform">
+            {t.brandNameShort}
           </div>
-          <span className="text-xs font-semibold text-muted-foreground ml-1 animate-fade-in">
-            {language === 'en' ? 'Tamer' : 'تامر'}
-          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -43,10 +42,26 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Right Section - Language Switcher & WhatsApp */}
-        <div className="flex items-center gap-4 animate-slide-left">
+        {/* Right Section - Theme, Language Switcher & WhatsApp */}
+        <div className="flex items-center gap-3 animate-slide-left">
+          {/* Theme Switcher */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-secondary dark:bg-muted hover:bg-secondary/80 dark:hover:bg-muted/80 transition-all duration-300 relative group"
+            title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+          >
+            {theme === 'light' ? (
+              <Moon size={20} className="text-foreground animate-scale-in" />
+            ) : (
+              <Sun size={20} className="text-foreground animate-scale-in" />
+            )}
+            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-foreground text-background text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {theme === 'light' ? 'Dark' : 'Light'}
+            </span>
+          </button>
+
           {/* Language Switcher */}
-          <div className="flex items-center gap-1 bg-secondary rounded-full p-1 cursor-pointer hover:bg-secondary/80 transition-colors duration-300">
+          <div className="flex items-center gap-1 bg-secondary dark:bg-muted rounded-full p-1 cursor-pointer hover:bg-secondary/80 dark:hover:bg-muted/80 transition-colors duration-300">
             <button
               onClick={() => setLanguage('en')}
               className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -95,7 +110,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-white animate-slide-down">
+        <div className="md:hidden border-t border-border dark:border-slate-700 bg-white dark:bg-slate-900 animate-slide-down transition-colors duration-300">
           <div className="px-4 py-4 space-y-3 flex flex-col">
             <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 py-2">
               {t.home}
