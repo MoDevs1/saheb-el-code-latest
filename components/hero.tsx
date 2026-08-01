@@ -1,12 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import { ArrowRight, Zap, Smartphone, MessageCircle } from 'lucide-react'
 import { useLanguage } from '@/lib/language-context'
 import { translations } from '@/lib/translations'
+import ContactModal from './contact-modal'
 
 export default function Hero() {
   const { language, isArabic } = useLanguage()
   const t = translations[language]
+  const [showContactModal, setShowContactModal] = useState(false)
 
   return (
     <section className="relative bg-gradient-to-b from-white via-secondary/30 to-white dark:from-[#0B0F17] dark:via-slate-900/30 dark:to-[#0B0F17] pt-20 pb-20 px-4 overflow-hidden">
@@ -36,7 +39,10 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up-fade" style={{ animationDelay: '0.4s' }}>
-          <button className="inline-flex items-center justify-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-emerald-500/30 hover:scale-105 transform">
+          <button
+            onClick={() => setShowContactModal(true)}
+            className="inline-flex items-center justify-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-emerald-500/30 hover:scale-105 transform"
+          >
             {t.heroGetStarted}
             <ArrowRight className="w-5 h-5" />
           </button>
@@ -77,6 +83,12 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal
+        isOpen={showContactModal}
+        onClose={() => setShowContactModal(false)}
+      />
     </section>
   )
 }

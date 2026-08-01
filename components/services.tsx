@@ -1,12 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import { Zap, Globe, ShoppingCart } from 'lucide-react'
 import { useLanguage } from '@/lib/language-context'
 import { translations } from '@/lib/translations'
+import ServiceModal from './service-modal'
 
 export default function Services() {
   const { language, isArabic } = useLanguage()
   const t = translations[language]
+  const [selectedService, setSelectedService] = useState<number | null>(null)
 
   // WhatsApp message templates for each service
   const whatsappMessages = {
@@ -82,20 +85,28 @@ export default function Services() {
                 </p>
 
                 {/* Link */}
-                <a
-                  href={`https://wa.me/201055891861?text=${service.whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary dark:text-emerald-400 hover:text-primary/80 dark:hover:text-emerald-300 font-semibold transition-all duration-300 group-hover:translate-x-1"
+                <button
+                  onClick={() => setSelectedService(index)}
+                  className="inline-flex items-center gap-2 text-primary dark:text-emerald-400 hover:text-primary/80 dark:hover:text-emerald-300 font-semibold transition-all duration-300 group-hover:translate-x-1 cursor-pointer"
                 >
                   {t.heroLearnMore}
                   <span className="group-hover:translate-x-1 transition-transform duration-300">{isArabic ? '←' : '→'}</span>
-                </a>
+                </button>
               </div>
             )
           })}
         </div>
       </div>
+
+      {/* Service Modal */}
+      {selectedService !== null && (
+        <ServiceModal
+          isOpen={selectedService !== null}
+          onClose={() => setSelectedService(null)}
+          serviceTitle={services[selectedService]?.titleKey || ''}
+          serviceIndex={selectedService}
+        />
+      )}
     </section>
   )
 }

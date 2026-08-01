@@ -87,6 +87,18 @@ export const translations = {
     footerEmail: 'Email:',
     footerPhone: 'Phone:',
     footerCopyright: 'All rights reserved',
+
+    // Modals
+    serviceModalTitle: 'Service Details',
+    serviceModalFeatures: 'Key Features',
+    serviceModalDeliverables: 'Deliverables',
+    serviceModalTimeline: 'Estimated Timeline',
+    serviceModalRequestCTA: 'Request Service on WhatsApp',
+    contactModalTitle: 'Get Started',
+    contactModalSubtitle: 'Choose how you\'d like to contact us',
+    contactModalWhatsapp: 'Chat via WhatsApp',
+    contactModalEmail: 'Send an Email',
+    contactModalClose: 'Close',
   },
   ar: {
     // Branding
@@ -176,6 +188,18 @@ export const translations = {
     footerEmail: 'البريد الإلكتروني:',
     footerPhone: 'الهاتف:',
     footerCopyright: 'جميع الحقوق محفوظة',
+
+    // Modals
+    serviceModalTitle: 'تفاصيل الخدمة',
+    serviceModalFeatures: 'المميزات الرئيسية',
+    serviceModalDeliverables: 'المخرجات',
+    serviceModalTimeline: 'الإطار الزمني المتوقع',
+    serviceModalRequestCTA: 'طلب الخدمة عبر واتساب',
+    contactModalTitle: 'ابدأ الآن',
+    contactModalSubtitle: 'اختر طريقة التواصل المفضلة لديك',
+    contactModalWhatsapp: 'الدردشة عبر واتساب',
+    contactModalEmail: 'إرسال بريد إلكتروني',
+    contactModalClose: 'إغلاق',
   },
 }
 
