@@ -8,21 +8,38 @@ export default function Services() {
   const { language, isArabic } = useLanguage()
   const t = translations[language]
 
+  // WhatsApp message templates for each service
+  const whatsappMessages = {
+    en: {
+      landing: encodeURIComponent('Hello SahebElCode, I would like to know more about your Landing Page service.'),
+      corporate: encodeURIComponent('Hello SahebElCode, I would like to know more about your Corporate Website service.'),
+      ecommerce: encodeURIComponent('Hello SahebElCode, I would like to know more about your E-commerce Website service.'),
+    },
+    ar: {
+      landing: encodeURIComponent('مرحبا صاحب الكود، أود معرفة المزيد عن خدمة صفحة الهبوط الخاصة بك.'),
+      corporate: encodeURIComponent('مرحبا صاحب الكود، أود معرفة المزيد عن خدمة موقع الشركة الخاصة بك.'),
+      ecommerce: encodeURIComponent('مرحبا صاحب الكود، أود معرفة المزيد عن خدمة موقع التجارة الإلكترونية الخاصة بك.'),
+    },
+  }
+
   const services = [
     {
       icon: Zap,
       titleKey: language === 'en' ? t.serviceLandingPageTitle : t.serviceLandingPageTitle,
       descKey: language === 'en' ? t.serviceLandingPageDesc : t.serviceLandingPageDesc,
+      whatsappMessage: language === 'en' ? whatsappMessages.en.landing : whatsappMessages.ar.landing,
     },
     {
       icon: Globe,
       titleKey: language === 'en' ? t.serviceCorporateTitle : t.serviceCorporateTitle,
       descKey: language === 'en' ? t.serviceCorporateDesc : t.serviceCorporateDesc,
+      whatsappMessage: language === 'en' ? whatsappMessages.en.corporate : whatsappMessages.ar.corporate,
     },
     {
       icon: ShoppingCart,
       titleKey: language === 'en' ? t.serviceEcommerce : t.serviceEcommerce,
       descKey: language === 'en' ? t.serviceEcommerceDesc : t.serviceEcommerceDesc,
+      whatsappMessage: language === 'en' ? whatsappMessages.en.ecommerce : whatsappMessages.ar.ecommerce,
     },
   ]
 
@@ -66,7 +83,9 @@ export default function Services() {
 
                 {/* Link */}
                 <a
-                  href="#"
+                  href={`https://wa.me/201055891861?text=${service.whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary dark:text-emerald-400 hover:text-primary/80 dark:hover:text-emerald-300 font-semibold transition-all duration-300 group-hover:translate-x-1"
                 >
                   {t.heroLearnMore}

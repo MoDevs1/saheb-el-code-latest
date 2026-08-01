@@ -138,17 +138,23 @@ export default function Footer() {
         {/* Social Media */}
         <div className="border-t border-gray-700 dark:border-slate-800 pt-8 pb-8 animate-fade-in">
           <div className="flex justify-center gap-6 mb-8">
-            {[Mail, Phone].map((Icon, index) => (
-              <a
-                key={index}
-                href="#"
-                className="w-10 h-10 bg-primary/20 dark:bg-emerald-500/20 hover:bg-primary dark:hover:bg-emerald-500 text-primary dark:text-emerald-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                aria-label="Social link"
-              >
-                <Icon className="w-5 h-5" />
-              </a>
-            ))}
+            <a
+              href="mailto:mtmm@sahebelcode.xyz"
+              className="w-10 h-10 bg-primary/20 dark:bg-emerald-500/20 hover:bg-primary dark:hover:bg-emerald-500 text-primary dark:text-emerald-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
+              aria-label="Email"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+            <a
+              href="https://wa.me/+201055891861"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-primary/20 dark:bg-emerald-500/20 hover:bg-primary dark:hover:bg-emerald-500 text-primary dark:text-emerald-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
+              style={{ animationDelay: "0.1s" }}
+              aria-label="WhatsApp"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
           </div>
         </div>
 
