@@ -11,18 +11,18 @@ export default function Services() {
   const services = [
     {
       icon: Zap,
-      titleKey: language === 'en' ? 'serviceLandingPageTitle' : 'serviceLandingPageTitle',
-      descKey: language === 'en' ? 'serviceLandingPageDesc' : 'serviceLandingPageDesc',
+      titleKey: language === 'en' ? t.serviceLandingPageTitle : t.serviceLandingPageTitle,
+      descKey: language === 'en' ? t.serviceLandingPageDesc : t.serviceLandingPageDesc,
     },
     {
       icon: Globe,
-      titleKey: language === 'en' ? 'serviceCorporateTitle' : 'serviceCorporateTitle',
-      descKey: language === 'en' ? 'serviceCorporateDesc' : 'serviceCorporateDesc',
+      titleKey: language === 'en' ? t.serviceCorporateTitle : t.serviceCorporateTitle,
+      descKey: language === 'en' ? t.serviceCorporateDesc : t.serviceCorporateDesc,
     },
     {
       icon: ShoppingCart,
-      titleKey: language === 'en' ? 'serviceEcommerce' : 'serviceEcommerce',
-      descKey: language === 'en' ? 'serviceEcommerceDesc' : 'serviceEcommerceDesc',
+      titleKey: language === 'en' ? t.serviceEcommerce : t.serviceEcommerce,
+      descKey: language === 'en' ? t.serviceEcommerceDesc : t.serviceEcommerceDesc,
     },
   ]
 
@@ -56,12 +56,12 @@ export default function Services() {
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                  {t[service.titleKey]}
+                  {service.titleKey}
                 </h3>
 
                 {/* Description */}
                 <p className="text-muted-foreground leading-relaxed mb-6 group-hover:text-foreground transition-colors duration-300">
-                  {t[service.descKey]}
+                  {service.descKey}
                 </p>
 
                 {/* Link */}

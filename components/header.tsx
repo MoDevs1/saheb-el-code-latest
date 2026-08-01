@@ -72,7 +72,7 @@ export default function Header() {
 
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/+201055891861"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/90 transition-all duration-300 hover:shadow-lg transform hover:scale-105"
@@ -110,7 +110,7 @@ export default function Header() {
               {t.about}
             </a>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/+201055891861"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/90 transition-colors duration-300"
