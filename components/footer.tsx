@@ -12,17 +12,17 @@ export default function Footer() {
   const quickLinks =
     language === "en"
       ? [
-        { label: "Services", href: "#services" },
-        { label: "Portfolio", href: "#portfolio" },
-        { label: "About", href: "#why-us" },
-        { label: "Contact", href: "#contact" },
-      ]
+          { label: "Services", href: "#services" },
+          { label: "Portfolio", href: "#portfolio" },
+          { label: "About", href: "#about" },
+          { label: "Contact", href: "#contact" },
+        ]
       : [
-        { label: "الخدمات", href: "#services" },
-        { label: "الأعمال", href: "#portfolio" },
-        { label: "عن الشركة", href: "#why-us" },
-        { label: "التواصل", href: "#contact" },
-      ];
+          { label: "الخدمات", href: "#services" },
+          { label: "الأعمال", href: "#portfolio" },
+          { label: "عن الشركة", href: "#about" },
+          { label: "التواصل", href: "#contact" },
+        ];
 
   return (
     <footer className="bg-foreground dark:bg-slate-950 text-white pt-20 pb-8 px-4 overflow-hidden transition-colors duration-300">
@@ -32,9 +32,6 @@ export default function Footer() {
           {/* Brand */}
           <div className="animate-slide-up-fade">
             <div className="flex items-center gap-2 mb-4 group cursor-pointer">
-              <div className="w-10 h-10 bg-primary dark:bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
-                <span className="text-xl font-bold text-white">S</span>
-              </div>
               <h3 className="text-lg font-bold group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors duration-300">
                 {t.brandName}
               </h3>
@@ -141,7 +138,7 @@ export default function Footer() {
         {/* Social Media */}
         <div className="border-t border-gray-700 dark:border-slate-800 pt-8 pb-8 animate-fade-in">
           <div className="flex justify-center gap-6 mb-8">
-            {[Mail, Phone, Heart].map((Icon, index) => (
+            {[Mail, Phone].map((Icon, index) => (
               <a
                 key={index}
                 href="#"
@@ -161,14 +158,17 @@ export default function Footer() {
             {language === "en"
               ? "All rights reserved © "
               : "جميع الحقوق محفوظة © "}
-            {currentYear} <span className="text-primary dark:text-emerald-400">{t.brandName}</span>
+            {currentYear}{" "}
+            <span className="text-primary dark:text-emerald-400">
+              {t.brandName}
+            </span>
             {language === "en"
               ? " - Web Development & Design"
               : " - تطوير المواقع والتطبيقات"}
           </p>
           <p className="mt-2 text-sm hover:text-white dark:hover:text-slate-200 transition-colors duration-300">
             {language === "en" ? "Made with " : "صُنع بـ "}
-            <Heart className="w-4 h-4 inline text-red-500 animate-pulse" />
+            {t.brandName}
             {language === "en" ? " for businesses" : " لأصحاب الأعمال"}
           </p>
         </div>
