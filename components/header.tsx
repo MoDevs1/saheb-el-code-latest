@@ -13,7 +13,7 @@ export default function Header() {
   const t = translations[language]
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-border dark:border-slate-700 animate-slide-down transition-colors duration-300">
+    <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-sm border-b border-border dark:border-slate-800 animate-slide-down transition-colors duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center group cursor-pointer">
@@ -24,21 +24,21 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 relative group">
+          <a href="#" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
             {t.home}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#services" className="text-foreground hover:text-primary transition-colors duration-300 relative group">
+          <a href="#services" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
             {t.services}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#portfolio" className="text-foreground hover:text-primary transition-colors duration-300 relative group">
+          <a href="#portfolio" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
             {t.portfolio}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#about" className="text-foreground hover:text-primary transition-colors duration-300 relative group">
+          <a href="#about" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
             {t.about}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
           </a>
         </div>
 
@@ -47,38 +47,38 @@ export default function Header() {
           {/* Theme Switcher */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-secondary dark:bg-muted hover:bg-secondary/80 dark:hover:bg-muted/80 transition-all duration-300 relative group"
+            className="p-2 rounded-full bg-secondary dark:bg-slate-800 hover:bg-secondary/80 dark:hover:bg-slate-700 transition-all duration-300 relative group"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
             {theme === 'light' ? (
-              <Moon size={20} className="text-foreground animate-scale-in" />
+              <Moon size={20} className="text-foreground dark:text-emerald-400 animate-scale-in" />
             ) : (
-              <Sun size={20} className="text-foreground animate-scale-in" />
+              <Sun size={20} className="text-emerald-400 animate-scale-in" />
             )}
-            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-foreground text-background text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-foreground dark:bg-slate-800 text-background dark:text-emerald-400 text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 border dark:border-slate-700">
               {theme === 'light' ? 'Dark' : 'Light'}
             </span>
           </button>
 
           {/* Language Switcher */}
-          <div className="flex items-center gap-1 bg-secondary dark:bg-muted rounded-full p-1 cursor-pointer hover:bg-secondary/80 dark:hover:bg-muted/80 transition-colors duration-300">
+          <div className="flex items-center gap-1 bg-secondary dark:bg-slate-800 rounded-full p-1 cursor-pointer hover:bg-secondary/80 dark:hover:bg-slate-700 transition-colors duration-300">
             <button
               onClick={() => setLanguage('en')}
               className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
                 language === 'en'
                   ? 'bg-primary text-white shadow-lg'
-                  : 'text-foreground hover:text-primary'
+                  : 'text-foreground dark:text-slate-300 hover:text-primary dark:hover:text-emerald-400'
               }`}
             >
               EN
             </button>
-            <div className="text-xs text-muted-foreground px-1">/</div>
+            <div className="text-xs text-muted-foreground dark:text-slate-600 px-1">/</div>
             <button
               onClick={() => setLanguage('ar')}
               className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
                 language === 'ar'
                   ? 'bg-primary text-white shadow-lg'
-                  : 'text-foreground hover:text-primary'
+                  : 'text-foreground dark:text-slate-300 hover:text-primary dark:hover:text-emerald-400'
               }`}
             >
               AR
@@ -101,7 +101,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors duration-300"
+            className="md:hidden p-2 rounded-lg hover:bg-secondary dark:hover:bg-slate-800 transition-colors duration-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -110,18 +110,18 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-border dark:border-slate-700 bg-white dark:bg-slate-900 animate-slide-down transition-colors duration-300">
+        <div className="md:hidden border-t border-border dark:border-slate-800 bg-white dark:bg-slate-900 animate-slide-down transition-colors duration-300">
           <div className="px-4 py-4 space-y-3 flex flex-col">
-            <a href="#" className="text-foreground hover:text-primary transition-colors duration-300 py-2">
+            <a href="#" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
               {t.home}
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors duration-300 py-2">
+            <a href="#services" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
               {t.services}
             </a>
-            <a href="#portfolio" className="text-foreground hover:text-primary transition-colors duration-300 py-2">
+            <a href="#portfolio" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
               {t.portfolio}
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors duration-300 py-2">
+            <a href="#about" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
               {t.about}
             </a>
             <a
