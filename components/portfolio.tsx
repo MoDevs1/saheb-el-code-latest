@@ -1,39 +1,44 @@
 'use client'
 
 import { ExternalLink, MessageCircle } from 'lucide-react'
+import { useLanguage } from '@/lib/language-context'
+import { translations } from '@/lib/translations'
 
 export default function Portfolio() {
+  const { language, isArabic } = useLanguage()
+  const t = translations[language]
+
   const projects = [
     {
-      title: 'متجر الملابس الفاخرة',
-      description: 'موقع متجر متكامل مع نظام إدارة المخزون والدفع الإلكتروني',
+      titleKey: 'project1Title',
+      descKey: 'project1Desc',
       tags: ['React', 'Tailwind', 'eCommerce'],
       image: 'bg-gradient-to-br from-blue-400 to-blue-600',
     },
     {
-      title: 'منصة دورات تعليمية',
-      description: 'منظومة تعليمية متكاملة مع نظام حجز وإدارة الطلاب',
-      tags: ['Next.js', 'Database', 'Learning'],
+      titleKey: 'project2Title',
+      descKey: 'project2Desc',
+      tags: ['Next.js', 'Database', 'Analytics'],
       image: 'bg-gradient-to-br from-purple-400 to-purple-600',
     },
     {
-      title: 'صفحة هبوط خدمات تسويق',
-      description: 'صفحة هبوط عالية التحويل مصممة لزيادة العملاء',
+      titleKey: 'project3Title',
+      descKey: 'project3Desc',
       tags: ['Landing Page', 'Conversion', 'GSAP'],
       image: 'bg-gradient-to-br from-green-400 to-green-600',
     },
   ]
 
   return (
-    <section id="portfolio" className="py-20 px-4 bg-secondary">
+    <section id="portfolio" className="py-20 px-4 bg-secondary overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-up-fade">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            نماذج من أعمالنا
+            {t.portfolioTitle}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            مشاريع حقيقية تم بناءها بأحدث تقنيات الفرونت إند
+            {t.portfolioSubtitle}
           </p>
         </div>
 
@@ -42,23 +47,24 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2 animate-slide-up-fade"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Image Placeholder */}
               <div className={`${project.image} h-48 flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
               </div>
 
               {/* Content */}
               <div className="p-6 flex-grow flex flex-col">
                 {/* Title */}
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  {project.title}
+                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  {t[project.titleKey]}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-sm mb-4 flex-grow">
-                  {project.description}
+                <p className="text-muted-foreground text-sm mb-4 flex-grow group-hover:text-foreground transition-colors duration-300">
+                  {t[project.descKey]}
                 </p>
 
                 {/* Tags */}
@@ -66,7 +72,7 @@ export default function Portfolio() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs bg-secondary text-primary px-3 py-1 rounded-full font-medium"
+                      className="text-xs bg-secondary text-primary px-3 py-1 rounded-full font-medium group-hover:bg-primary/10 transition-colors duration-300"
                     >
                       {tag}
                     </span>
@@ -75,18 +81,18 @@ export default function Portfolio() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-primary px-4 py-2 rounded-lg font-semibold transition-all text-sm">
+                  <button className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-primary px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform">
                     <ExternalLink className="w-4 h-4" />
-                    معاينة
+                    {t.projectPreview}
                   </button>
                   <a
-                    href="https://wa.me/?text=مرحبا%20أرغب%20في%20موقع%20مثل%20هذا"
+                    href="https://wa.me/1234567890"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    اطلب مثله
+                    {t.requestProject}
                   </a>
                 </div>
               </div>
@@ -95,9 +101,9 @@ export default function Portfolio() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <button className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg hover:shadow-primary/30">
-            عرض جميع المشاريع
+        <div className="text-center mt-12 animate-fade-in">
+          <button className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-105 transform">
+            {language === 'en' ? 'View All Projects' : 'عرض جميع المشاريع'}
             <ExternalLink className="w-5 h-5" />
           </button>
         </div>

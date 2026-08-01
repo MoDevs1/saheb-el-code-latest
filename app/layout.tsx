@@ -1,10 +1,11 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import { LanguageProvider } from '@/lib/language-context'
 
 export const metadata: Metadata = {
-  title: 'صاحب الكود | تطوير المواقع والتطبيقات',
-  description: 'احصل على موقع إلكتروني احترافي يضاعف مبيعاتك - تصميم متجاوب، سرعة فائقة، وتكامل الواتساب المباشر',
+  title: 'ENG/Mohamed Tamer | Web Development & Design',
+  description: 'Professional web development and design solutions that drive growth and engagement for your business',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -39,9 +40,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" className="bg-background">
+    <html lang="en" className="bg-background" suppressHydrationWarning>
       <body className="antialiased bg-background">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

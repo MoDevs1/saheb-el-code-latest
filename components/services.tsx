@@ -1,36 +1,41 @@
 'use client'
 
-import { Zap, Globe, BookOpen } from 'lucide-react'
+import { Zap, Globe, ShoppingCart } from 'lucide-react'
+import { useLanguage } from '@/lib/language-context'
+import { translations } from '@/lib/translations'
 
 export default function Services() {
+  const { language, isArabic } = useLanguage()
+  const t = translations[language]
+
   const services = [
     {
       icon: Zap,
-      title: 'صفحات هبوط عالية التحويل',
-      description: 'صفحات مبيعات مخصصة لإعلاناتك، مصممة لإقناع الزائر وتحويله لعميل يدفع فوراً.',
+      titleKey: language === 'en' ? 'serviceLandingPageTitle' : 'serviceLandingPageTitle',
+      descKey: language === 'en' ? 'serviceLandingPageDesc' : 'serviceLandingPageDesc',
     },
     {
       icon: Globe,
-      title: 'مواقع الشركات والأنشطة التجارية',
-      description: 'موقع رسمي يعكس احترافية شركتك، يعرض خدماتك، ويسهل على العملاء الوصول لك.',
+      titleKey: language === 'en' ? 'serviceCorporateTitle' : 'serviceCorporateTitle',
+      descKey: language === 'en' ? 'serviceCorporateDesc' : 'serviceCorporateDesc',
     },
     {
-      icon: BookOpen,
-      title: 'منظومات تعليمية وسنتر إلكتروني',
-      description: 'مواقع مخصصة للمدرسين والمراكز التعليمية لتنظيم المواعيد وتسهيل حجز الطلاب.',
+      icon: ShoppingCart,
+      titleKey: language === 'en' ? 'serviceEcommerce' : 'serviceEcommerce',
+      descKey: language === 'en' ? 'serviceEcommerceDesc' : 'serviceEcommerceDesc',
     },
   ]
 
   return (
-    <section id="services" className="py-20 px-4 bg-white">
+    <section id="services" className="py-20 px-4 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-up-fade">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            خدمات مصممة لنمو شغلك
+            {t.servicesTitle}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            نقدم حلول متكاملة تناسب احتياجات عملك من التخطيط إلى التنفيذ
+            {t.servicesSubtitle}
           </p>
         </div>
 
@@ -41,30 +46,31 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-muted to-white border border-border rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-gradient-to-br from-muted to-white border border-border rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade cursor-pointer"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                  <Icon className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300">
+                  <Icon className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform duration-300" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {service.title}
+                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  {t[service.titleKey]}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {service.description}
+                <p className="text-muted-foreground leading-relaxed mb-6 group-hover:text-foreground transition-colors duration-300">
+                  {t[service.descKey]}
                 </p>
 
                 {/* Link */}
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-all duration-300 group-hover:translate-x-1"
                 >
-                  اعرف المزيد
-                  <span>←</span>
+                  {t.heroLearnMore}
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">{isArabic ? '←' : '→'}</span>
                 </a>
               </div>
             )
