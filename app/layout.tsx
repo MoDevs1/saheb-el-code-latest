@@ -23,23 +23,23 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/icon.png',
+        media: 'icon.png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        url: '/icon.png',
+        media: 'icon.png',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon.png',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/icon.png',
   },
   openGraph: {
     type: 'website',
-    url: 'https://sahebelcode.com',
+    url: 'https://sahebelcode.xyz',
     title: 'SahebElCode Company | Professional Web Development & Design Solutions',
     description: 'Transform your business online with professional web development and design solutions. 50+ projects delivered.',
     siteName: 'SahebElCode Company',
@@ -80,10 +80,10 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code',
   },
   alternates: {
-    canonical: 'https://sahebelcode.com',
+    canonical: 'https://sahebelcode.xyz',
     languages: {
-      'en-US': 'https://sahebelcode.com?lang=en',
-      'ar-EG': 'https://sahebelcode.com?lang=ar',
+      'en-US': 'https://sahebelcode.xyz?lang=en',
+      'ar-EG': 'https://sahebelcode.xyz?lang=ar',
     },
   },
 }
@@ -104,7 +104,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://sahebelcode.com" />
+        <link rel="canonical" href="https://sahebelcode.xyz" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="google-site-verification-code" />
         <SEOSchema />

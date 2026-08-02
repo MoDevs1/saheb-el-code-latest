@@ -40,4 +40,4 @@ User-agent: SemrushBot
 Disallow: /
 
 # Sitemap reference
-Sitemap: https://sahebelcode.com/sitemap.xml
+Sitemap: https://sahebelcode.xyz/sitemap.xml
