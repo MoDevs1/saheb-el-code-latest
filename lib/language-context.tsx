@@ -30,7 +30,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         setLanguageState(savedLanguage)
       }
     } catch (error) {
-      console.log('[v0] localStorage not available')
+      console.log('localStorage not available')
     }
     setMounted(true)
   }, [])
@@ -40,7 +40,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     try {
       localStorage.setItem('language', lang)
     } catch (error) {
-      console.log('[v0] localStorage not available')
+      console.log('localStorage not available')
     }
   }
 

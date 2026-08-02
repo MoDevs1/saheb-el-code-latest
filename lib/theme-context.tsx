@@ -14,8 +14,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 const defaultContext: ThemeContextType = {
   theme: 'light',
-  setTheme: () => {},
-  toggleTheme: () => {},
+  setTheme: () => { },
+  toggleTheme: () => { },
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -37,7 +37,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         }
       }
     } catch (error) {
-      console.log('[v0] localStorage not available')
+      console.log('localStorage not available')
     }
     setMounted(true)
   }, [])
@@ -56,7 +56,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     try {
       localStorage.setItem('theme', newTheme)
     } catch (error) {
-      console.log('[v0] localStorage not available')
+      console.log('localStorage not available')
     }
     applyTheme(newTheme)
   }
