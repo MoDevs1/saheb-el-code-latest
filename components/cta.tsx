@@ -27,13 +27,6 @@ export default function CTA() {
     window.open(`https://wa.me/+201055891861?text=${encodedMessage}`, "_blank");
   };
 
-  const stats = [
-    { numberKey: "50", labelKey: t.ctaStats.projects },
-    { numberKey: "100", labelKey: t.ctaStats.clients },
-    { numberKey: "24/7", labelKey: t.ctaStats.support },
-    { numberKey: "95", labelKey: t.ctaStats.satisfaction },
-  ];
-
   return (
     <section
       id="contact"
@@ -130,24 +123,6 @@ export default function CTA() {
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="animate-slide-up-fade group hover:scale-110 transition-transform duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <p className="text-3xl font-bold text-primary dark:text-emerald-400 group-hover:scale-125 transition-transform duration-300">
-                {stat.numberKey}
-                {language === "en" ? "+" : ""}
-              </p>
-              <p className="text-muted-foreground dark:text-slate-400 mt-2 group-hover:text-foreground dark:group-hover:text-slate-200 transition-colors duration-300">
-                {stat.labelKey}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
