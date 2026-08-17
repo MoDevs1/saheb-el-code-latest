@@ -12,23 +12,23 @@ export default function Portfolio() {
     {
       titleKey: t.project1Title,
       descKey: t.project1Desc,
-      tags: ["React", "Tailwind", "eCommerce"],
+      tags: ["React", "Tailwind", "Templates"],
       image: "bg-gradient-to-br from-blue-400 to-blue-600",
-      link: "https://project1.com",
+      link: "https://designhub.sahebelcode.xyz",
     },
     {
       titleKey: t.project2Title,
       descKey: t.project2Desc,
-      tags: ["Next.js", "Database", "Analytics"],
+      tags: ["Next.js", "Education", "Arabic"],
       image: "bg-gradient-to-br from-purple-400 to-purple-600",
-      link: "https://project1.com",
+      link: "https://mr-mohamedelsayed.sahebelcode.xyz",
     },
     {
       titleKey: t.project3Title,
       descKey: t.project3Desc,
-      tags: ["Landing Page", "Conversion", "GSAP"],
+      tags: ["Responsive", "Portfolio", "Personal Brand"],
       image: "bg-gradient-to-br from-green-400 to-green-600",
-      link: "https://project1.com",
+      link: "https://mohamedtamer.sahebelcode.xyz",
     },
   ];
 
@@ -50,7 +50,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-emerald-500/20 transition-all duration-300 flex flex-col hover:-translate-y-2 border dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 animate-slide-up-fade"
+              className="group bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-emerald-500/20 transition-all duration-300 flex flex-col hover:-translate-y-2 border-border hover:border-primary/50 animate-slide-up-fade"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Image Placeholder */}
