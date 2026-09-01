@@ -42,6 +42,11 @@ export const translations = {
     project3Desc: 'A responsive personal presentation website designed to showcase a digital identity, work, and services clearly across devices.',
     project4Title: 'Nova Grid Renewable Energy Website',
     project4Desc: 'An immersive renewable energy experience with a bold visual identity, interactive storytelling, and a future-focused presentation.',
+    project5Title: 'Warreni Community Platform',
+    project5Desc: 'A modern Arabic platform for discovering opportunities, sharing skills, and connecting with a supportive community.',
+    projectInProgressTitle: 'Project in progress',
+    projectInProgressDesc: 'We are currently working on this project and it will be available soon.',
+    close: 'Close',
 
     // Why Us
     whyUsTitle: 'Why Choose Us',
@@ -145,6 +150,11 @@ export const translations = {
     project3Desc: 'واجهة تعريفية شخصية لعرض الهوية الرقمية والأعمال والخدمات بطريقة واضحة ومتجاوبة على مختلف الأجهزة.',
     project4Title: 'موقع Nova Grid للطاقة المتجددة',
     project4Desc: 'تجربة عصرية للطاقة المتجددة بهوية بصرية جريئة وسرد تفاعلي يعكس رؤية مستقبلية مبتكرة.',
+    project5Title: 'منصة وُريني المجتمعية',
+    project5Desc: 'منصة عربية عصرية لاكتشاف الفرص ومشاركة المهارات والتواصل مع مجتمع داعم.',
+    projectInProgressTitle: 'المشروع قيد العمل',
+    projectInProgressDesc: 'نعمل حالياً على هذا المشروع وسيكون متاحاً قريباً.',
+    close: 'إغلاق',
 
     // Why Us
     whyUsTitle: 'لماذا تختارنا',
