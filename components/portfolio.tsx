@@ -13,22 +13,29 @@ export default function Portfolio() {
       titleKey: t.project1Title,
       descKey: t.project1Desc,
       tags: ["React", "Tailwind", "Templates"],
-      image: "bg-gradient-to-br from-blue-400 to-blue-600",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-iDrpuVRCnT49WJpHdPOU7A8qVyvJPQ.png",
       link: "https://designhub.sahebelcode.xyz",
     },
     {
       titleKey: t.project2Title,
       descKey: t.project2Desc,
       tags: ["Next.js", "Education", "Arabic"],
-      image: "bg-gradient-to-br from-purple-400 to-purple-600",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0SxnPxTqjEHjSoMtS2nASzxaX8xjnF.png",
       link: "https://mr-mohamedelsayed.sahebelcode.xyz",
     },
     {
       titleKey: t.project3Title,
       descKey: t.project3Desc,
       tags: ["Responsive", "Portfolio", "Personal Brand"],
-      image: "bg-gradient-to-br from-green-400 to-green-600",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dAurNF68uDoZs6NCVOxQd73zmnjykT.png",
       link: "https://mohamedtamer.sahebelcode.xyz",
+    },
+    {
+      titleKey: t.project4Title,
+      descKey: t.project4Desc,
+      tags: ["Next.js", "Renewable Energy", "Interactive"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ntBJrDWavQbI5uvqZHYdEDC7HOcnQx.png",
+      link: "https://solara.sahebelcode.xyz",
     },
   ];
 
@@ -46,18 +53,21 @@ export default function Portfolio() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
               className="group bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-emerald-500/20 transition-all duration-300 flex flex-col hover:-translate-y-2 border-border hover:border-primary/50 animate-slide-up-fade"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              {/* Image Placeholder */}
-              <div
-                className={`${project.image} h-48 flex items-center justify-center relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+              {/* Project Preview Image */}
+              <div className="h-48 relative overflow-hidden bg-secondary">
+                <img
+                  src={project.image}
+                  alt={project.titleKey}
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-300" />
               </div>
 
               {/* Content */}
