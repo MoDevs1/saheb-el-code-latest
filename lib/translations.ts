@@ -40,6 +40,8 @@ export const translations = {
     project2Desc: 'An Arabic learning platform for chemistry lessons, study notes, videos, exams, a periodic table, and equation balancing tools.',
     project3Title: 'Mohamed Tamer Personal Website',
     project3Desc: 'A responsive personal presentation website designed to showcase a digital identity, work, and services clearly across devices.',
+    project4Title: 'Nova Grid Renewable Energy Website',
+    project4Desc: 'An immersive renewable energy experience with a bold visual identity, interactive storytelling, and a future-focused presentation.',
 
     // Why Us
     whyUsTitle: 'Why Choose Us',
@@ -141,6 +143,8 @@ export const translations = {
     project2Desc: 'منصة تعليمية عربية لشرح الكيمياء، تضم مذكرات المنهج والفيديوهات والاختبارات والجدول الدوري وأداة موازنة المعادلات.',
     project3Title: 'موقع محمد تامر الشخصي',
     project3Desc: 'واجهة تعريفية شخصية لعرض الهوية الرقمية والأعمال والخدمات بطريقة واضحة ومتجاوبة على مختلف الأجهزة.',
+    project4Title: 'موقع Nova Grid للطاقة المتجددة',
+    project4Desc: 'تجربة عصرية للطاقة المتجددة بهوية بصرية جريئة وسرد تفاعلي يعكس رؤية مستقبلية مبتكرة.',
 
     // Why Us
     whyUsTitle: 'لماذا تختارنا',
