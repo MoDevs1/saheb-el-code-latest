@@ -7,7 +7,7 @@ import { translations } from "@/lib/translations";
 import ContactModal from "./contact-modal";
 
 export default function Hero() {
-  const { language, isArabic } = useLanguage();
+  const { language } = useLanguage();
   const t = translations[language];
   const [showContactModal, setShowContactModal] = useState(false);
 
@@ -35,13 +35,6 @@ export default function Hero() {
           >
             {t.heroTitle}
           </h1>
-          <p
-            className="text-xl md:text-2xl text-primary dark:text-blue-400 font-semibold mb-6 animate-slide-up-fade"
-            style={{ animationDelay: "0.2s" }}
-          >
-            {isArabic ? "✨" : "⭐"}{" "}
-            {language === "en" ? "Proven Results" : "نتائج مثبوتة"}
-          </p>
         </div>
 
         {/* Subheadline */}
