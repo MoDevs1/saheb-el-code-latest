@@ -47,7 +47,7 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-20 px-4 bg-white dark:bg-[#0B0F17] overflow-hidden transition-colors duration-300">
+    <section id="services" className="relative overflow-hidden bg-background px-4 py-24 transition-colors duration-300 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-primary/50 before:to-transparent">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-up-fade">
@@ -66,7 +66,7 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-muted to-white dark:from-slate-900/60 dark:to-slate-800/40 border border-border dark:border-slate-800 rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 dark:hover:shadow-blue-500/20 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade cursor-pointer"
+                className="group relative cursor-pointer overflow-hidden rounded-3xl border border-border/80 bg-card/70 p-8 shadow-[0_18px_60px_-28px_color-mix(in_srgb,var(--primary)_45%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/70 hover:shadow-[0_24px_80px_-28px_color-mix(in_srgb,var(--primary)_75%,transparent)] animate-slide-up-fade"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Icon */}

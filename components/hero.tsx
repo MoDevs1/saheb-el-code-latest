@@ -12,7 +12,7 @@ export default function Hero() {
   const [showContactModal, setShowContactModal] = useState(false);
 
   return (
-    <section className="relative bg-gradient-to-b from-white via-secondary/30 to-white dark:from-[#0B0F17] dark:via-slate-900/30 dark:to-[#0B0F17] pt-20 pb-20 px-4 overflow-hidden">
+    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_50%_0%,color-mix(in_srgb,var(--primary)_18%,transparent),transparent_42%),linear-gradient(180deg,var(--background),var(--background))] px-4 pb-24 pt-24">
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-8">
