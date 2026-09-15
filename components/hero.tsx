@@ -12,8 +12,11 @@ export default function Hero() {
   const [showContactModal, setShowContactModal] = useState(false);
 
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_50%_0%,color-mix(in_srgb,var(--primary)_18%,transparent),transparent_42%),linear-gradient(180deg,var(--background),var(--background))] px-4 pb-24 pt-24">
-      <div className="max-w-6xl mx-auto">
+    <section className="hero-pulse-background relative overflow-hidden bg-[radial-gradient(circle_at_50%_0%,color-mix(in_srgb,var(--primary)_18%,transparent),transparent_42%),linear-gradient(180deg,var(--background),var(--background))] px-4 pb-24 pt-24">
+      <div className="hero-pulse-orb hero-pulse-orb-one" aria-hidden="true" />
+      <div className="hero-pulse-orb hero-pulse-orb-two" aria-hidden="true" />
+      <div className="hero-pulse-grid" aria-hidden="true" />
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 bg-secondary dark:bg-slate-800/80 border dark:border-blue-500/30 rounded-full px-4 py-2 animate-slide-up-fade">
