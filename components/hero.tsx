@@ -16,9 +16,9 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-secondary dark:bg-slate-800/80 border dark:border-emerald-500/30 rounded-full px-4 py-2 animate-slide-up-fade">
-            <Zap className="w-4 h-4 text-primary dark:text-emerald-400 animate-pulse-glow" />
-            <span className="text-sm font-medium text-primary dark:text-emerald-400">
+          <div className="inline-flex items-center gap-2 bg-secondary dark:bg-slate-800/80 border dark:border-blue-500/30 rounded-full px-4 py-2 animate-slide-up-fade">
+            <Zap className="w-4 h-4 text-primary dark:text-blue-400 animate-pulse-glow" />
+            <span className="text-sm font-medium text-primary dark:text-blue-400">
               {t.heroHighlight}
             </span>
           </div>
@@ -33,7 +33,7 @@ export default function Hero() {
             {t.heroTitle}
           </h1>
           <p
-            className="text-xl md:text-2xl text-primary dark:text-emerald-400 font-semibold mb-6 animate-slide-up-fade"
+            className="text-xl md:text-2xl text-primary dark:text-blue-400 font-semibold mb-6 animate-slide-up-fade"
             style={{ animationDelay: "0.2s" }}
           >
             {isArabic ? "✨" : "⭐"}{" "}
@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <button
             onClick={() => setShowContactModal(true)}
-            className="inline-flex items-center justify-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-emerald-500/30 hover:scale-105 transform"
+            className="inline-flex items-center justify-center gap-2 bg-primary dark:bg-blue-500 hover:bg-primary/90 dark:hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-blue-500/30 hover:scale-105 transform"
           >
             {t.heroGetStarted}
             <ArrowRight className="w-5 h-5" />
@@ -72,8 +72,8 @@ export default function Hero() {
             className="flex items-center gap-3 text-center md:text-right group hover:scale-105 transition-transform duration-300"
             style={{ animationDelay: "0s" }}
           >
-            <div className="flex-shrink-0 w-12 h-12 bg-secondary dark:bg-slate-800 rounded-full flex items-center justify-center group-hover:bg-primary/10 dark:group-hover:bg-emerald-500/20 transition-colors duration-300">
-              <Zap className="w-6 h-6 text-primary dark:text-emerald-400 animate-float" />
+            <div className="flex-shrink-0 w-12 h-12 bg-secondary dark:bg-slate-800 rounded-full flex items-center justify-center group-hover:bg-primary/10 dark:group-hover:bg-blue-500/20 transition-colors duration-300">
+              <Zap className="w-6 h-6 text-primary dark:text-blue-400 animate-float" />
             </div>
             <div>
               <p className="font-bold text-foreground dark:text-slate-100">
@@ -88,9 +88,9 @@ export default function Hero() {
             className="flex items-center gap-3 text-center md:text-right group hover:scale-105 transition-transform duration-300"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="flex-shrink-0 w-12 h-12 bg-secondary dark:bg-slate-800 rounded-full flex items-center justify-center group-hover:bg-primary/10 dark:group-hover:bg-emerald-500/20 transition-colors duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-secondary dark:bg-slate-800 rounded-full flex items-center justify-center group-hover:bg-primary/10 dark:group-hover:bg-blue-500/20 transition-colors duration-300">
               <Smartphone
-                className="w-6 h-6 text-primary dark:text-emerald-400 animate-float"
+                className="w-6 h-6 text-primary dark:text-blue-400 animate-float"
                 style={{ animationDelay: "0.3s" }}
               />
             </div>
@@ -109,9 +109,9 @@ export default function Hero() {
             className="flex items-center gap-3 text-center md:text-right group hover:scale-105 transition-transform duration-300"
             style={{ animationDelay: "0.2s" }}
           >
-            <div className="flex-shrink-0 w-12 h-12 bg-secondary dark:bg-slate-800 rounded-full flex items-center justify-center group-hover:bg-primary/10 dark:group-hover:bg-emerald-500/20 transition-colors duration-300">
+            <div className="flex-shrink-0 w-12 h-12 bg-secondary dark:bg-slate-800 rounded-full flex items-center justify-center group-hover:bg-primary/10 dark:group-hover:bg-blue-500/20 transition-colors duration-300">
               <MessageCircle
-                className="w-6 h-6 text-primary dark:text-emerald-400 animate-float"
+                className="w-6 h-6 text-primary dark:text-blue-400 animate-float"
                 style={{ animationDelay: "0.6s" }}
               />
             </div>

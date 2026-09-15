@@ -95,7 +95,7 @@ export default function ServiceModal({ isOpen, onClose, serviceTitle, serviceInd
                 {/* Features Section */}
                 <div>
                   <h3 className="text-lg font-bold text-foreground dark:text-slate-100 mb-4 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary dark:text-emerald-400" />
+                    <CheckCircle className="w-5 h-5 text-primary dark:text-blue-400" />
                     {t.serviceModalFeatures}
                   </h3>
                   <ul className="space-y-2">
@@ -104,7 +104,7 @@ export default function ServiceModal({ isOpen, onClose, serviceTitle, serviceInd
                         key={idx}
                         className="flex items-start gap-3 text-muted-foreground dark:text-slate-400"
                       >
-                        <span className="w-2 h-2 rounded-full bg-primary dark:bg-emerald-400 mt-2 flex-shrink-0" />
+                        <span className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 mt-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -122,7 +122,7 @@ export default function ServiceModal({ isOpen, onClose, serviceTitle, serviceInd
                         key={idx}
                         className="flex items-start gap-3 text-muted-foreground dark:text-slate-400"
                       >
-                        <span className="w-2 h-2 rounded-full bg-primary dark:bg-emerald-400 mt-2 flex-shrink-0" />
+                        <span className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 mt-2 flex-shrink-0" />
                         {deliverable}
                       </li>
                     ))}
@@ -134,7 +134,7 @@ export default function ServiceModal({ isOpen, onClose, serviceTitle, serviceInd
                   <p className="text-sm text-muted-foreground dark:text-slate-400 mb-1">
                     {t.serviceModalTimeline}
                   </p>
-                  <p className="text-2xl font-bold text-primary dark:text-emerald-400">
+                  <p className="text-2xl font-bold text-primary dark:text-blue-400">
                     {currentDetails.timeline}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default function ServiceModal({ isOpen, onClose, serviceTitle, serviceInd
               href="https://wa.me/201055891861"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg dark:hover:shadow-emerald-500/30"
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary dark:bg-blue-500 hover:bg-primary/90 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg dark:hover:shadow-blue-500/30"
             >
               <MessageCircle className="w-5 h-5" />
               {t.serviceModalRequestCTA}

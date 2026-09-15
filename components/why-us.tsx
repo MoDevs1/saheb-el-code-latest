@@ -58,14 +58,14 @@ export default function WhyUs() {
               >
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-secondary dark:bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-primary dark:group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 group-hover:scale-110">
-                    <Icon className="w-8 h-8 text-primary dark:text-emerald-400 group-hover:text-white transition-colors duration-300 group-hover:animate-float" />
+                  <div className="w-16 h-16 bg-secondary dark:bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-primary dark:group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                    <Icon className="w-8 h-8 text-primary dark:text-blue-400 group-hover:text-white transition-colors duration-300 group-hover:animate-float" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-2 group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-300">
                     {feature.titleKey}
                   </h3>
                   <p className="text-muted-foreground dark:text-slate-400 leading-relaxed group-hover:text-foreground dark:group-hover:text-slate-200 transition-colors duration-300">
@@ -89,7 +89,7 @@ export default function WhyUs() {
                 className="group p-4 rounded-lg hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all duration-300 animate-slide-right"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h4 className="font-bold text-primary dark:text-emerald-400 mb-2 group-hover:text-primary/80 dark:group-hover:text-emerald-300 transition-colors duration-300">
+                <h4 className="font-bold text-primary dark:text-blue-400 mb-2 group-hover:text-primary/80 dark:group-hover:text-blue-300 transition-colors duration-300">
                   {benefit}
                 </h4>
                 <p className="text-muted-foreground dark:text-slate-400 text-sm group-hover:text-foreground dark:group-hover:text-slate-200 transition-colors duration-300">

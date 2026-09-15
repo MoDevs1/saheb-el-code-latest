@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://sahebelcode.xyz',
+    url: 'https://alemni.sahebelcode.xyz',
     title: 'SahebElCode Company | Professional Web Development & Design Solutions',
     description: 'Transform your business online with professional web development and design solutions. 50+ projects delivered.',
     siteName: 'SahebElCode Company',
@@ -80,10 +80,10 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code',
   },
   alternates: {
-    canonical: 'https://sahebelcode.xyz',
+    canonical: 'https://alemni.sahebelcode.xyz',
     languages: {
-      'en-US': 'https://sahebelcode.xyz?lang=en',
-      'ar-EG': 'https://sahebelcode.xyz?lang=ar',
+      'en-US': 'https://alemni.sahebelcode.xyz?lang=en',
+      'ar-EG': 'https://alemni.sahebelcode.xyz?lang=ar',
     },
   },
 }
@@ -104,7 +104,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://sahebelcode.xyz" />
+        <link rel="canonical" href="https://alemni.sahebelcode.xyz" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="google-site-verification-code" />
         <SEOSchema />

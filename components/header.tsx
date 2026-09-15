@@ -16,29 +16,30 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-sm border-b border-border dark:border-slate-800 animate-slide-down transition-colors duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center group cursor-pointer">
+        <a href="#" aria-label={t.brandNameShort} className="flex items-center gap-3 group">
+          <img src="/icon.png" alt="" aria-hidden="true" className="h-10 w-10 rounded-xl object-contain shadow-sm transition-transform group-hover:scale-105" />
           <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-scale-in group-hover:scale-105 transition-transform">
             {t.brandNameShort}
           </div>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
+          <a href="#" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 relative group">
             {t.home}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-blue-400 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#services" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
+          <a href="#services" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 relative group">
             {t.services}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-blue-400 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#portfolio" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
+          <a href="#portfolio" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 relative group">
             {t.portfolio}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-blue-400 group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a href="#about" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 relative group">
+          <a href="#about" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 relative group">
             {t.about}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-emerald-400 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary dark:bg-blue-400 group-hover:w-full transition-all duration-300"></span>
           </a>
         </div>
 
@@ -51,11 +52,11 @@ export default function Header() {
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
             {theme === 'light' ? (
-              <Moon size={20} className="text-foreground dark:text-emerald-400 animate-scale-in" />
+              <Moon size={20} className="text-foreground dark:text-blue-400 animate-scale-in" />
             ) : (
-              <Sun size={20} className="text-emerald-400 animate-scale-in" />
+              <Sun size={20} className="text-blue-400 animate-scale-in" />
             )}
-            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-foreground dark:bg-slate-800 text-background dark:text-emerald-400 text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 border dark:border-slate-700">
+            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-foreground dark:bg-slate-800 text-background dark:text-blue-400 text-xs rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 border dark:border-slate-700">
               {theme === 'light' ? 'Dark' : 'Light'}
             </span>
           </button>
@@ -67,7 +68,7 @@ export default function Header() {
               className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
                 language === 'en'
                   ? 'bg-primary text-white shadow-lg'
-                  : 'text-foreground dark:text-slate-300 hover:text-primary dark:hover:text-emerald-400'
+                  : 'text-foreground dark:text-slate-300 hover:text-primary dark:hover:text-blue-400'
               }`}
             >
               EN
@@ -78,7 +79,7 @@ export default function Header() {
               className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
                 language === 'ar'
                   ? 'bg-primary text-white shadow-lg'
-                  : 'text-foreground dark:text-slate-300 hover:text-primary dark:hover:text-emerald-400'
+                  : 'text-foreground dark:text-slate-300 hover:text-primary dark:hover:text-blue-400'
               }`}
             >
               AR
@@ -112,16 +113,16 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden border-t border-border dark:border-slate-800 bg-white dark:bg-slate-900 animate-slide-down transition-colors duration-300">
           <div className="px-4 py-4 space-y-3 flex flex-col">
-            <a href="#" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
+            <a href="#" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 py-2">
               {t.home}
             </a>
-            <a href="#services" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
+            <a href="#services" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 py-2">
               {t.services}
             </a>
-            <a href="#portfolio" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
+            <a href="#portfolio" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 py-2">
               {t.portfolio}
             </a>
-            <a href="#about" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300 py-2">
+            <a href="#about" className="text-foreground dark:text-slate-100 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300 py-2">
               {t.about}
             </a>
             <a

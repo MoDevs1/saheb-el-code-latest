@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="animate-slide-up-fade">
             <div className="flex items-center gap-2 mb-4 group cursor-pointer">
-              <h3 className="text-lg font-bold group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors duration-300">
+              <h3 className="text-lg font-bold group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-300">
                 {t.brandName}
               </h3>
             </div>
@@ -46,7 +46,7 @@ export default function Footer() {
             className="animate-slide-up-fade"
             style={{ animationDelay: "0.1s" }}
           >
-            <h4 className="font-bold mb-4 text-white hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300">
+            <h4 className="font-bold mb-4 text-white hover:text-primary dark:hover:text-blue-400 transition-colors duration-300">
               {language === "en" ? "Quick Links" : "روابط سريعة"}
             </h4>
             <ul className="space-y-2">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <li key={link.label} className="group">
                   <a
                     href={link.href}
-                    className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-emerald-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
+                    className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
                   >
                     {link.label}
                   </a>
@@ -68,14 +68,14 @@ export default function Footer() {
             className="animate-slide-up-fade"
             style={{ animationDelay: "0.2s" }}
           >
-            <h4 className="font-bold mb-4 text-white hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300">
+            <h4 className="font-bold mb-4 text-white hover:text-primary dark:hover:text-blue-400 transition-colors duration-300">
               {t.services}
             </h4>
             <ul className="space-y-2">
               <li className="group">
                 <a
                   href="#services"
-                  className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-emerald-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
+                  className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
                 >
                   {t.serviceLandingPageTitle}
                 </a>
@@ -83,7 +83,7 @@ export default function Footer() {
               <li className="group">
                 <a
                   href="#services"
-                  className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-emerald-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
+                  className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
                 >
                   {t.serviceCorporateTitle}
                 </a>
@@ -91,7 +91,7 @@ export default function Footer() {
               <li className="group">
                 <a
                   href="#services"
-                  className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-emerald-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
+                  className="text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-all duration-300 group-hover:translate-x-1 inline-block"
                 >
                   {t.serviceEcommerce}
                 </a>
@@ -104,7 +104,7 @@ export default function Footer() {
             className="animate-slide-up-fade"
             style={{ animationDelay: "0.3s" }}
           >
-            <h4 className="font-bold mb-4 text-white hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300">
+            <h4 className="font-bold mb-4 text-white hover:text-primary dark:hover:text-blue-400 transition-colors duration-300">
               {t.footerContact}
             </h4>
             <div className="space-y-3">
@@ -112,7 +112,7 @@ export default function Footer() {
                 href="https://wa.me/+201055891861"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-emerald-400 transition-all duration-300 group hover:scale-110 group-hover:animate-float"
+                className="inline-flex items-center gap-2 text-gray-300 dark:text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-all duration-300 group hover:scale-110 group-hover:animate-float"
               >
                 <svg
                   className="w-5 h-5"
@@ -123,11 +123,11 @@ export default function Footer() {
                 </svg>
                 {language === "en" ? "WhatsApp" : "واتساب"}
               </a>
-              <p className="text-gray-300 dark:text-slate-400 flex items-center gap-2 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300">
+              <p className="text-gray-300 dark:text-slate-400 flex items-center gap-2 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300">
                 <Mail className="w-4 h-4" />
                 mtmm@sahebelcode.xyz
               </p>
-              <p className="text-gray-300 dark:text-slate-400 flex items-center gap-2 hover:text-primary dark:hover:text-emerald-400 transition-colors duration-300">
+              <p className="text-gray-300 dark:text-slate-400 flex items-center gap-2 hover:text-primary dark:hover:text-blue-400 transition-colors duration-300">
                 <Phone className="w-4 h-4" />
                 +201055891861
               </p>
@@ -140,7 +140,7 @@ export default function Footer() {
           <div className="flex justify-center gap-6 mb-8">
             <a
               href="mailto:mtmm@sahebelcode.xyz"
-              className="w-10 h-10 bg-primary/20 dark:bg-emerald-500/20 hover:bg-primary dark:hover:bg-emerald-500 text-primary dark:text-emerald-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
+              className="w-10 h-10 bg-primary/20 dark:bg-blue-500/20 hover:bg-primary dark:hover:bg-blue-500 text-primary dark:text-blue-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -149,7 +149,7 @@ export default function Footer() {
               href="https://wa.me/+201055891861"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-primary/20 dark:bg-emerald-500/20 hover:bg-primary dark:hover:bg-emerald-500 text-primary dark:text-emerald-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
+              className="w-10 h-10 bg-primary/20 dark:bg-blue-500/20 hover:bg-primary dark:hover:bg-blue-500 text-primary dark:text-blue-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-180 animate-scale-in"
               style={{ animationDelay: "0.1s" }}
               aria-label="WhatsApp"
             >
@@ -165,7 +165,7 @@ export default function Footer() {
               ? "All rights reserved © "
               : "جميع الحقوق محفوظة © "}
             {currentYear}{" "}
-            <span className="text-primary dark:text-emerald-400">
+            <span className="text-primary dark:text-blue-400">
               {t.brandName}
             </span>
             {language === "en"

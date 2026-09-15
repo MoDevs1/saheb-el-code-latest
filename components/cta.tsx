@@ -37,11 +37,11 @@ export default function CTA() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 bg-gradient-to-r from-secondary to-primary/5 dark:from-slate-900/50 dark:to-emerald-500/5 overflow-hidden transition-colors duration-300"
+      className="py-20 px-4 bg-gradient-to-r from-secondary to-primary/5 dark:from-slate-900/50 dark:to-blue-500/5 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-4xl mx-auto">
         {/* Main CTA Card */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg dark:shadow-emerald-500/20 border dark:border-slate-800 p-8 md:p-12 animate-scale-in">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg dark:shadow-blue-500/20 border dark:border-slate-800 p-8 md:p-12 animate-scale-in">
           {/* Headline */}
           <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-slate-100 text-center mb-4 animate-slide-up-fade">
             {t.ctaTitle}
@@ -66,7 +66,7 @@ export default function CTA() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-foreground dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-emerald-400 transition-all duration-300 hover:border-primary dark:hover:border-emerald-400"
+                  className="w-full px-4 py-3 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-foreground dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-400 transition-all duration-300 hover:border-primary dark:hover:border-blue-400"
                   required
                 />
                 <input
@@ -76,7 +76,7 @@ export default function CTA() {
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  className="w-full px-4 py-3 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-foreground dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-emerald-400 transition-all duration-300 hover:border-primary dark:hover:border-emerald-400"
+                  className="w-full px-4 py-3 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-foreground dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-400 transition-all duration-300 hover:border-primary dark:hover:border-blue-400"
                   required
                 />
                 <select
@@ -84,7 +84,7 @@ export default function CTA() {
                   onChange={(e) =>
                     setFormData({ ...formData, service: e.target.value })
                   }
-                  className="w-full px-4 py-3 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-foreground dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-emerald-400 transition-all duration-300 hover:border-primary dark:hover:border-emerald-400"
+                  className="w-full px-4 py-3 border border-border dark:border-slate-700 bg-white dark:bg-slate-800 text-foreground dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-blue-400 transition-all duration-300 hover:border-primary dark:hover:border-blue-400"
                 >
                   <option value="">{t.ctaSelectService}</option>
                   <option value={t.ctaLandingPage}>{t.ctaLandingPage}</option>
@@ -93,7 +93,7 @@ export default function CTA() {
                 </select>
                 <button
                   type="submit"
-                  className="w-full bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white font-bold py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-emerald-500/30 hover:scale-105 transform"
+                  className="w-full bg-primary dark:bg-blue-500 hover:bg-primary/90 dark:hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-blue-500/30 hover:scale-105 transform"
                 >
                   {t.ctaSendMessage}
                 </button>
@@ -101,9 +101,9 @@ export default function CTA() {
             </div>
 
             {/* Direct Contact */}
-            <div className="bg-secondary dark:bg-slate-800/60 border dark:border-slate-700 rounded-xl p-6 flex flex-col justify-between animate-slide-left group hover:shadow-lg dark:hover:shadow-emerald-500/20 transition-all duration-300">
+            <div className="bg-secondary dark:bg-slate-800/60 border dark:border-slate-700 rounded-xl p-6 flex flex-col justify-between animate-slide-left group hover:shadow-lg dark:hover:shadow-blue-500/20 transition-all duration-300">
               <div>
-                <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-4 group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-300">
                   {t.ctaDirectContact}
                 </h3>
                 <p className="text-muted-foreground dark:text-slate-400 mb-6 group-hover:text-foreground dark:group-hover:text-slate-200 transition-colors duration-300">
@@ -115,7 +115,7 @@ export default function CTA() {
                 href="https://wa.me/+201055891861"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-6 py-4 rounded-lg font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-emerald-500/30 hover:scale-110 transform group-hover:animate-pulse-glow"
+                className="inline-flex items-center justify-center gap-2 bg-primary dark:bg-blue-500 hover:bg-primary/90 dark:hover:bg-blue-600 text-white px-6 py-4 rounded-lg font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-blue-500/30 hover:scale-110 transform group-hover:animate-pulse-glow"
               >
                 <svg
                   className="w-5 h-5 animate-float"
@@ -138,7 +138,7 @@ export default function CTA() {
               className="animate-slide-up-fade group hover:scale-110 transition-transform duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <p className="text-3xl font-bold text-primary dark:text-emerald-400 group-hover:scale-125 transition-transform duration-300">
+              <p className="text-3xl font-bold text-primary dark:text-blue-400 group-hover:scale-125 transition-transform duration-300">
                 {stat.numberKey}
                 {language === "en" ? "+" : ""}
               </p>
