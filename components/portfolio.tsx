@@ -41,7 +41,7 @@ export default function Portfolio() {
       descKey: t.project5Desc,
       tags: ["Arabic", "Community", "Opportunities"],
       image: "/warreni-preview.png",
-      link: "https://warreni.sahebelcode.xyz",
+      link: "https://alemni.sahebelcode.xyz",
     },
   ];
 
@@ -63,7 +63,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-emerald-500/20 transition-all duration-300 flex flex-col hover:-translate-y-2 border-border hover:border-primary/50 animate-slide-up-fade"
+              className="group bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-blue-500/20 transition-all duration-300 flex flex-col hover:-translate-y-2 border-border hover:border-primary/50 animate-slide-up-fade"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Project Preview Image */}
@@ -79,7 +79,7 @@ export default function Portfolio() {
               {/* Content */}
               <div className="p-6 flex-grow flex flex-col">
                 {/* Title */}
-                <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-2 group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-300">
                   {project.titleKey}
                 </h3>
 
@@ -93,7 +93,7 @@ export default function Portfolio() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs bg-secondary dark:bg-slate-800 text-primary dark:text-emerald-400 px-3 py-1 rounded-full font-medium group-hover:bg-primary/10 dark:group-hover:bg-emerald-500/20 transition-colors duration-300"
+                      className="text-xs bg-secondary dark:bg-slate-800 text-primary dark:text-blue-400 px-3 py-1 rounded-full font-medium group-hover:bg-primary/10 dark:group-hover:bg-blue-500/20 transition-colors duration-300"
                     >
                       {tag}
                     </span>
@@ -106,7 +106,7 @@ export default function Portfolio() {
                     href={project.link || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary dark:bg-slate-800 hover:bg-secondary/80 dark:hover:bg-slate-700 text-primary dark:text-emerald-400 px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform cursor-pointer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary dark:bg-slate-800 hover:bg-secondary/80 dark:hover:bg-slate-700 text-primary dark:text-blue-400 px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform cursor-pointer"
                   >
                     <ExternalLink className="w-4 h-4" />
                     {t.projectPreview}
@@ -115,7 +115,7 @@ export default function Portfolio() {
                     href="https://wa.me/+201055891861"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-primary dark:bg-blue-500 hover:bg-primary/90 dark:hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform"
                   >
                     <MessageCircle className="w-4 h-4" />
                     {t.requestProject}
@@ -128,7 +128,7 @@ export default function Portfolio() {
 
         {/* CTA */}
         <div className="text-center mt-12 animate-fade-in">
-          <button className="inline-flex items-center gap-2 bg-primary dark:bg-emerald-500 hover:bg-primary/90 dark:hover:bg-emerald-600 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-emerald-500/30 hover:scale-105 transform">
+          <button className="inline-flex items-center gap-2 bg-primary dark:bg-blue-500 hover:bg-primary/90 dark:hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-blue-500/30 hover:scale-105 transform">
             {language === "en" ? "View All Projects" : "عرض جميع المشاريع"}
             <ExternalLink className="w-5 h-5" />
           </button>

@@ -56,10 +56,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={onClose}
-                className="flex items-center gap-4 p-4 rounded-xl border-2 border-emerald-500/30 dark:border-emerald-500/30 hover:border-emerald-500 dark:hover:border-emerald-400 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-all duration-300 group cursor-pointer"
+                className="flex items-center gap-4 p-4 rounded-xl border-2 border-blue-500/30 dark:border-blue-500/30 hover:border-blue-500 dark:hover:border-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-all duration-300 group cursor-pointer"
               >
-                <div className="w-12 h-12 bg-emerald-500/20 dark:bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/30 dark:group-hover:bg-emerald-500/30 transition-colors duration-300">
-                  <MessageCircle className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                <div className="w-12 h-12 bg-blue-500/20 dark:bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 dark:group-hover:bg-blue-500/30 transition-colors duration-300">
+                  <MessageCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-foreground dark:text-slate-100">
@@ -75,10 +75,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <a
                 href="mailto:mtmm@sahebelcode.xyz"
                 onClick={onClose}
-                className="flex items-center gap-4 p-4 rounded-xl border-2 border-primary/30 dark:border-emerald-500/30 hover:border-primary dark:hover:border-emerald-400 hover:bg-primary/5 dark:hover:bg-emerald-900/20 transition-all duration-300 group cursor-pointer"
+                className="flex items-center gap-4 p-4 rounded-xl border-2 border-primary/30 dark:border-blue-500/30 hover:border-primary dark:hover:border-blue-400 hover:bg-primary/5 dark:hover:bg-blue-900/20 transition-all duration-300 group cursor-pointer"
               >
-                <div className="w-12 h-12 bg-primary/20 dark:bg-emerald-500/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 dark:group-hover:bg-emerald-500/30 transition-colors duration-300">
-                  <Mail className="w-6 h-6 text-primary dark:text-emerald-400" />
+                <div className="w-12 h-12 bg-primary/20 dark:bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 dark:group-hover:bg-blue-500/30 transition-colors duration-300">
+                  <Mail className="w-6 h-6 text-primary dark:text-blue-400" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-foreground dark:text-slate-100">

@@ -66,16 +66,16 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-muted to-white dark:from-slate-900/60 dark:to-slate-800/40 border border-border dark:border-slate-800 rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 dark:hover:shadow-emerald-500/20 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade cursor-pointer"
+                className="group bg-gradient-to-br from-muted to-white dark:from-slate-900/60 dark:to-slate-800/40 border border-border dark:border-slate-800 rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 dark:hover:shadow-blue-500/20 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade cursor-pointer"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-secondary dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 dark:group-hover:bg-emerald-500/20 group-hover:scale-110 transition-all duration-300">
-                  <Icon className="w-8 h-8 text-primary dark:text-emerald-400 group-hover:rotate-12 transition-transform duration-300" />
+                <div className="w-16 h-16 bg-secondary dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 dark:group-hover:bg-blue-500/20 group-hover:scale-110 transition-all duration-300">
+                  <Icon className="w-8 h-8 text-primary dark:text-blue-400 group-hover:rotate-12 transition-transform duration-300" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-4 group-hover:text-primary dark:group-hover:text-emerald-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-foreground dark:text-slate-100 mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors duration-300">
                   {service.titleKey}
                 </h3>
 
@@ -87,7 +87,7 @@ export default function Services() {
                 {/* Link */}
                 <button
                   onClick={() => setSelectedService(index)}
-                  className="inline-flex items-center gap-2 text-primary dark:text-emerald-400 hover:text-primary/80 dark:hover:text-emerald-300 font-semibold transition-all duration-300 group-hover:translate-x-1 cursor-pointer"
+                  className="inline-flex items-center gap-2 text-primary dark:text-blue-400 hover:text-primary/80 dark:hover:text-blue-300 font-semibold transition-all duration-300 group-hover:translate-x-1 cursor-pointer"
                 >
                   {t.heroLearnMore}
                   <span className="group-hover:translate-x-1 transition-transform duration-300">{isArabic ? '←' : '→'}</span>

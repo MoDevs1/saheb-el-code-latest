@@ -5,7 +5,7 @@ export default function SEOSchema() {
     name: 'SahebElCode Company',
     alternateName: 'شركة صاحب الكود',
     description: 'Professional web development and design solutions',
-    url: 'https://sahebelcode.xyz',
+    url: 'https://alemni.sahebelcode.xyz',
     telephone: '+201055891861',
     email: 'mtmm@sahebelcode.xyz',
     address: {
@@ -19,7 +19,7 @@ export default function SEOSchema() {
     sameAs: [
       'https://wa.me/+201055891861',
     ],
-    image: 'https://sahebelcode.xyz/og-image.png',
+    image: 'https://alemni.sahebelcode.xyz/og-image.png',
     priceRange: '$$',
     areaServed: ['EG', 'AE', 'SA', 'KW'],
     serviceType: [
@@ -45,8 +45,8 @@ export default function SEOSchema() {
     '@type': 'Organization',
     name: 'SahebElCode Company',
     alternateName: 'شركة صاحب الكود',
-    url: 'https://sahebelcode.xyz',
-    logo: 'https://sahebelcode.xyz/logo.png',
+    url: 'https://alemni.sahebelcode.xyz',
+    logo: 'https://alemni.sahebelcode.xyz/logo.png',
     description: 'Professional web development and design company delivering 50+ projects',
     foundingDate: '2020',
     contactPoint: {
