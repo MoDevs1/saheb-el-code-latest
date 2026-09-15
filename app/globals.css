@@ -224,6 +224,97 @@ html {
   }
 }
 
+@keyframes heartbeat-beat {
+  0%,
+  12%,
+  24%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+
+  8%,
+  18% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat-wave {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.8;
+  }
+
+  70%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat-line {
+  0%,
+  100% {
+    clip-path: polygon(0 54%, 18% 54%, 27% 54%, 35% 54%, 43% 54%, 51% 54%, 60% 54%, 68% 54%, 76% 54%, 84% 54%, 100% 54%, 100% 66%, 84% 66%, 76% 66%, 68% 66%, 60% 66%, 51% 66%, 43% 66%, 35% 66%, 27% 66%, 18% 66%, 0 66%);
+  }
+
+  8% {
+    clip-path: polygon(0 54%, 18% 54%, 27% 54%, 35% 54%, 43% 54%, 48% 54%, 52% 18%, 57% 88%, 62% 38%, 67% 54%, 76% 54%, 84% 54%, 100% 54%, 100% 66%, 84% 66%, 76% 66%, 67% 66%, 62% 66%, 57% 66%, 52% 66%, 48% 66%, 43% 66%, 35% 66%, 27% 66%, 18% 66%, 0 66%);
+  }
+
+  18% {
+    clip-path: polygon(0 54%, 18% 54%, 27% 54%, 35% 54%, 43% 54%, 48% 54%, 52% 18%, 57% 88%, 62% 38%, 67% 54%, 76% 54%, 84% 54%, 100% 54%, 100% 66%, 84% 66%, 76% 66%, 67% 66%, 62% 66%, 57% 66%, 52% 66%, 48% 66%, 43% 66%, 35% 66%, 27% 66%, 18% 66%, 0 66%);
+  }
+}
+
+.heartbeat-core {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary), 0 0 28px color-mix(in srgb, var(--primary) 80%, transparent);
+  animation: heartbeat-beat 1.35s ease-in-out infinite;
+}
+
+.heartbeat-line {
+  position: absolute;
+  inset: -20px 0;
+  display: block;
+  background: currentColor;
+  color: var(--primary);
+  filter: drop-shadow(0 0 5px var(--primary));
+  animation: heartbeat-line 1.35s ease-in-out infinite;
+}
+
+.heartbeat-ring {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid color-mix(in srgb, var(--primary) 70%, transparent);
+  border-radius: 999px;
+  animation: heartbeat-wave 1.35s ease-out infinite;
+}
+
+.heartbeat-ring-delay-1 {
+  animation-delay: 0.25s;
+}
+
+.heartbeat-ring-delay-2 {
+  animation-delay: 0.7s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heartbeat-core,
+  .heartbeat-line,
+  .heartbeat-ring {
+    animation: none;
+  }
+}
+
 @layer utilities {
   .animate-slide-up-fade {
     animation: slideUpFade 0.6s ease-out;
