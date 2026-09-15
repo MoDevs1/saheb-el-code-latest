@@ -1,15 +1,12 @@
 "use client";
 
-import { ExternalLink, MessageCircle, X } from "lucide-react";
-import { useState } from "react";
+import { ExternalLink, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { translations } from "@/lib/translations";
 
 export default function Portfolio() {
   const { language, isArabic } = useLanguage();
   const t = translations[language];
-  const [showInProgress, setShowInProgress] = useState(false);
-
   const projects = [
     {
       titleKey: t.project1Title,
@@ -45,7 +42,6 @@ export default function Portfolio() {
       tags: ["Arabic", "Community", "Opportunities"],
       image: "/warreni-preview.png",
       link: "https://warreni.sahebelcode.xyz",
-      inProgress: true,
     },
   ];
 
@@ -106,26 +102,15 @@ export default function Portfolio() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  {project.inProgress ? (
-                    <button
-                      type="button"
-                      onClick={() => setShowInProgress(true)}
-                      className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary dark:bg-slate-800 hover:bg-secondary/80 dark:hover:bg-slate-700 text-primary dark:text-emerald-400 px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform cursor-pointer"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      {t.projectPreview}
-                    </button>
-                  ) : (
-                    <a
-                      href={project.link || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary dark:bg-slate-800 hover:bg-secondary/80 dark:hover:bg-slate-700 text-primary dark:text-emerald-400 px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform cursor-pointer"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      {t.projectPreview}
-                    </a>
-                  )}
+                  <a
+                    href={project.link || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary dark:bg-slate-800 hover:bg-secondary/80 dark:hover:bg-slate-700 text-primary dark:text-emerald-400 px-4 py-2 rounded-lg font-semibold transition-all text-sm group-hover:scale-105 transform cursor-pointer"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    {t.projectPreview}
+                  </a>
                   <a
                     href="https://wa.me/+201055891861"
                     target="_blank"
@@ -140,22 +125,6 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
-
-        {showInProgress && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/50 px-4" role="dialog" aria-modal="true" aria-labelledby="project-progress-title" onClick={() => setShowInProgress(false)}>
-            <div className="relative w-full max-w-md rounded-2xl bg-card p-8 text-center shadow-2xl" onClick={(event) => event.stopPropagation()}>
-              <button type="button" onClick={() => setShowInProgress(false)} aria-label={t.close} className="absolute right-4 top-4 rounded-full p-2 text-muted-foreground hover:bg-secondary hover:text-foreground">
-                <X className="h-5 w-5" />
-              </button>
-              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <ExternalLink className="h-7 w-7" />
-              </div>
-              <h3 id="project-progress-title" className="mb-3 text-2xl font-bold text-foreground">{t.projectInProgressTitle}</h3>
-              <p className="text-muted-foreground">{t.projectInProgressDesc}</p>
-              <button type="button" onClick={() => setShowInProgress(false)} className="mt-6 rounded-lg bg-primary px-6 py-2 font-semibold text-primary-foreground hover:bg-primary/90">{t.close}</button>
-            </div>
-          </div>
-        )}
 
         {/* CTA */}
         <div className="text-center mt-12 animate-fade-in">
