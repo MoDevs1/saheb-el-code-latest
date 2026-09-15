@@ -27,15 +27,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Heartbeat pulse accent */}
-        <div className="relative mx-auto mb-8 flex h-14 w-40 items-center justify-center" aria-hidden="true">
-          <span className="heartbeat-ring heartbeat-ring-delay-1" />
-          <span className="heartbeat-ring heartbeat-ring-delay-2" />
-          <span className="heartbeat-core">
-            <span className="heartbeat-line" />
-          </span>
-        </div>
-
         {/* Headline */}
         <div className="text-center mb-8">
           <h1
