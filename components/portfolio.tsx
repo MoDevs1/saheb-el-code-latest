@@ -46,7 +46,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-4 bg-secondary dark:bg-slate-900/30 overflow-hidden transition-colors duration-300">
+    <section id="portfolio" className="relative overflow-hidden bg-secondary/45 px-4 py-24 transition-colors duration-300 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_15%_20%,color-mix(in_srgb,var(--primary)_12%,transparent),transparent_28%)]">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-up-fade">
@@ -63,7 +63,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-card text-card-foreground rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-blue-500/20 transition-all duration-300 flex flex-col hover:-translate-y-2 border-border hover:border-primary/50 animate-slide-up-fade"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-border/80 bg-card text-card-foreground shadow-[0_18px_60px_-30px_color-mix(in_srgb,var(--primary)_45%,transparent)] transition-all duration-300 hover:-translate-y-2 hover:border-primary/70 hover:shadow-[0_28px_90px_-30px_color-mix(in_srgb,var(--primary)_80%,transparent)] animate-slide-up-fade"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Project Preview Image */}
