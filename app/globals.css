@@ -253,6 +253,39 @@ html {
   }
 }
 
+@keyframes hero-background-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+
+  45% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+
+  55% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes hero-grid-flash {
+  0%,
+  100% {
+    opacity: 0.08;
+  }
+
+  45% {
+    opacity: 0.3;
+  }
+
+  55% {
+    opacity: 0.12;
+  }
+}
+
 @keyframes heartbeat-line {
   0%,
   100% {
@@ -307,11 +340,68 @@ html {
   animation-delay: 0.7s;
 }
 
+.hero-pulse-background::before {
+  content: "";
+  position: absolute;
+  inset: 10% -15% 0;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--primary) 20%, transparent), transparent 62%);
+  filter: blur(28px);
+  pointer-events: none;
+  animation: hero-background-pulse 1.35s ease-in-out infinite;
+}
+
+.hero-pulse-orb {
+  position: absolute;
+  width: min(48vw, 34rem);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 18%, transparent);
+  filter: blur(72px);
+  opacity: 0.45;
+  pointer-events: none;
+  animation: hero-background-pulse 1.35s ease-in-out infinite;
+}
+
+.hero-pulse-orb-one {
+  top: 8%;
+  left: 8%;
+}
+
+.hero-pulse-orb-two {
+  right: 8%;
+  bottom: -25%;
+  animation-delay: 0.18s;
+}
+
+.hero-pulse-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(color-mix(in srgb, var(--primary) 22%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--primary) 22%, transparent) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: radial-gradient(ellipse at center, black, transparent 72%);
+  pointer-events: none;
+  animation: hero-grid-flash 1.35s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-pulse-background::before,
+  .hero-pulse-orb,
+  .hero-pulse-grid,
   .heartbeat-core,
   .heartbeat-line,
   .heartbeat-ring {
     animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-pulse-orb {
+    width: 78vw;
+    filter: blur(52px);
+  }
+
+  .hero-pulse-grid {
+    background-size: 3rem 3rem;
   }
 }
 
