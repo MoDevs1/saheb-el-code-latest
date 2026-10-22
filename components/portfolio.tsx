@@ -43,6 +43,13 @@ export default function Portfolio() {
       image: "/warreni-preview.png",
       link: "https://alemni.sahebelcode.xyz",
     },
+    {
+      titleKey: t.project6Title,
+      descKey: t.project6Desc,
+      tags: ["Next.js", "Chemistry", "Education"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ETxxcgqKaF9yUaksOj1kjcMrJWBHar.png",
+      link: "https://kemya.sahebelcode.xyz",
+    },
   ];
 
   return (
